@@ -13,6 +13,10 @@
     "Page1_fetch_orders": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
+    },
+    "Page1_fetch_user": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     }
   },
   "publishedLayoutmongoEscapedWidgets": {},

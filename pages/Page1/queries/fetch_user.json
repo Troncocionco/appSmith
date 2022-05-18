@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "fetch_orders",
+    "name": "fetch_user",
     "datasource": {
       "name": "orders_database",
       "pluginId": "google-sheets-plugin",
@@ -49,7 +49,7 @@
         },
         {
           "key": "sheetName",
-          "value": "Orders"
+          "value": "Customers"
         },
         {
           "key": "rowOffset",
@@ -77,25 +77,32 @@
           "key": "where",
           "value": [
             {
-              "path": "",
-              "value": ""
+              "path": "Id",
+              "value": "{{ orders_table.selectedRow.Customer_Id }}",
+              "operator": "EQ"
             }
           ]
         }
       ]
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "pluginSpecifiedTemplates[14].value[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "orders_table.selectedRow.Customer_Id"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_fetch_orders",
+  "id": "Page1_fetch_user",
   "deleted": false,
-  "gitSyncId": "6284cf79309fd93a9bf13ba1_6284e1e0309fd93a9bf141c3"
+  "gitSyncId": "6284cf79309fd93a9bf13ba1_6284e5aa309fd93a9bf14300"
 }
